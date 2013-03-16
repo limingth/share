@@ -65,10 +65,9 @@
 * sudo apt-get install unoconv
 
 ## 几个实用转换范例
-* md -> html  
+* md -> html [html下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.html)
 
 		pandoc --ascii -f markdown -t html -o demo.html demo.md  
-	- [html下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.html)
 
 * md -> doc  
 	pandoc demo.md -o demo.doc
