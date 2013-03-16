@@ -61,17 +61,19 @@ int main(void)
 </ul>
 <h2 id="几个实用转换范例">几个实用转换范例</h2>
 <ul>
-<li><p>md -&gt; html <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.html">(demo.html)</a></p>
+<li><p>md-&gt;html <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.html">(demo.html)</a></p>
 <pre><code>pandoc --ascii -f markdown -t html -o demo.html demo.md  </code></pre></li>
-<li><p>md -&gt; doc <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc">(demo.doc)</a></p>
-<pre><code>pandoc demo.md -o demo.doc</code></pre></li>
-<li><p>md -&gt; doc -&gt; pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf">(demo.pdf)</a></p>
-<pre><code>unoconv -f pdf demo.doc </code></pre></li>
-<li><p>md -&gt; tex -&gt; doc.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf">(demo.doc.pdf)</a></p>
+<li><p>md-&gt;doc <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc">(demo.doc)</a></p>
+<pre><code>pandoc demo.md -o demo.doc
+    (目录无数字标题1.1.1)</code></pre></li>
+<li><p>md-&gt;doc-&gt;pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf">(demo.pdf)</a></p>
+<pre><code>unoconv -f pdf demo.doc 
+    (目录无数字标题1.1.1)</code></pre></li>
+<li><p>md-&gt;tex-&gt;doc.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf">(demo.doc.pdf)</a></p>
 <pre><code>pandoc $(SRC) -o $(PREFIX)2doc.tex
 xelatex demo.doc.tex
-    (demo.doc.tex 是自制doc tex模板文件)</code></pre></li>
-<li><p>md -&gt; tex -&gt; ppt.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf">(demo.ppt.pdf)</a></p>
+    (demo.doc.tex 是自制doc tex模板文件, 自动生成数字标题1.1.1)</code></pre></li>
+<li><p>md-&gt;tex-&gt;ppt.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf">(demo.ppt.pdf)</a></p>
 <pre><code>pandoc -t beamer --slide-level 2 demo.md -o demo.tex
 xelatex demo.ppt.tex
     (demo.ppt.tex 是自制ppt tex模板文件)</code></pre></li>

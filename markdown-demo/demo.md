@@ -65,25 +65,27 @@
 * sudo apt-get install unoconv
 
 ## 几个实用转换范例
-* md -> html  [(demo.html)](https://github.com/limingth/share/tree/master/markdown-demo/demo.html)
+* md->html  [(demo.html)](https://github.com/limingth/share/tree/master/markdown-demo/demo.html)
 
 		pandoc --ascii -f markdown -t html -o demo.html demo.md  
 
-* md -> doc  [(demo.doc)](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc)
+* md->doc  [(demo.doc)](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc)
 
 		pandoc demo.md -o demo.doc
+			(目录无数字标题1.1.1)
 
-* md -> doc -> pdf  [(demo.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf)
+* md->doc->pdf  [(demo.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf)
 
 		unoconv -f pdf demo.doc 
+			(目录无数字标题1.1.1)
 	
-* md -> tex -> doc.pdf  [(demo.doc.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)
+* md->tex->doc.pdf  [(demo.doc.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)
 
 		pandoc $(SRC) -o $(PREFIX)2doc.tex
 		xelatex demo.doc.tex
-			(demo.doc.tex 是自制doc tex模板文件)
+			(demo.doc.tex 是自制doc tex模板文件, 自动生成数字标题1.1.1)
 	
-* md -> tex -> ppt.pdf  [(demo.ppt.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf)
+* md->tex->ppt.pdf  [(demo.ppt.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf)
 
 		pandoc -t beamer --slide-level 2 demo.md -o demo.tex
 		xelatex demo.ppt.tex
