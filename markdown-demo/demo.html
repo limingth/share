@@ -1,0 +1,104 @@
+<h1 id="markdown&#20351;&#29992;&#32463;&#39564;&#20171;&#32461;">Markdown&#20351;&#29992;&#32463;&#39564;&#20171;&#32461;</h1>
+<h2 id="&#26412;&#27425;&#35762;&#24231;&#22823;&#32434;">&#26412;&#27425;&#35762;&#24231;&#22823;&#32434;</h2>
+<ul>
+<li>Markdown&#26684;&#24335;&#31616;&#20171;
+<ul>
+<li>&#26631;&#39064;</li>
+<li>&#21015;&#34920;</li>
+<li>&#20869;&#23481;</li>
+</ul></li>
+<li>&#26684;&#24335;&#36716;&#25442;&#24037;&#20855;&#20351;&#29992;
+<ul>
+<li>pandoc</li>
+<li>xelatex</li>
+<li>unoconv</li>
+</ul></li>
+<li>&#20960;&#20010;&#23454;&#29992;&#36716;&#25442;&#33539;&#20363;
+<ul>
+<li>md -&gt; html, doc, pdf, ppt</li>
+</ul></li>
+</ul>
+<div class="figure">
+<img src="./figures/1.1.png" alt="markdown logo" /><p class="caption">markdown logo</p>
+</div>
+<h2 id="markdown-&#30446;&#24405;&#32467;&#26500;">Markdown &#30446;&#24405;&#32467;&#26500;</h2>
+<h3 id="&#26631;&#39064;">&#26631;&#39064;</h3>
+<ul>
+<li><p>&#19968;&#32423;/&#20108;&#32423;/&#19977;&#32423;/&#22235;&#32423;<br /> # &#19968;&#32423;&#26631;&#39064;<br /> ## &#20108;&#32423;&#26631;&#39064;<br /> ### &#19977;&#32423;&#26631;&#39064;<br /> #### &#22235;&#32423;&#26631;&#39064;</p></li>
+<li><p>&#36824;&#26377;&#19968;&#31181;&#20889;&#27861;<br /> &#19968;&#32423;&#26631;&#39064;<br /> =========<br /> &#20108;&#32423;&#26631;&#39064;<br /> ---------</p></li>
+</ul>
+<h3 id="&#21015;&#34920;">&#21015;&#34920;</h3>
+<ul>
+<li>&#26143;&#21495;(&#23454;&#24515;&#22278;&#28857;)
+<ul>
+<li>&#20943;&#21495;(&#31354;&#24515;&#22278;&#28857;)</li>
+</ul></li>
+</ul>
+<h2 id="markdown-&#27491;&#25991;&#20869;&#23481;">Markdown &#27491;&#25991;&#20869;&#23481;</h2>
+<h3 id="&#20869;&#23481;">&#20869;&#23481;</h3>
+<ul>
+<li>&#40657;&#20307;/&#26012;&#20307;<br /> &#36825;&#26159;&#19968;&#27573; <strong>&#40657;&#20307;</strong> &#25991;&#23383;<br /> &#36825;&#26159;&#19968;&#27573; <em>&#26012;&#20307;</em> &#25991;&#23383;</li>
+<li>&#36229;&#38142;&#25509;<br /> &#27426;&#36814;&#35775;&#38382;&#25105;&#30340;&#24494;&#21338; <a href="http://weibo.com/limingth"><code class="url">http://weibo.com/limingth</code></a><br /> &#35831;&#20851;&#27880; <a href="http://weibo.com/limingth">@&#20122;&#23884;&#26446;&#26126;&#32769;&#24072;</a></li>
+<li>&#25442;&#34892;<br /> &#21487;&#20197;&#22312;&#34892;&#23614;&#36755;&#20837;2&#20010;&#31354;&#26684;<br /> &#23601;&#21487;&#20197;&#23454;&#29616;&#25442;&#34892;&#21151;&#33021;</li>
+</ul>
+<h2 id="markdown-&#20195;&#30721;&#24341;&#29992;">Markdown &#20195;&#30721;&#24341;&#29992;</h2>
+<h3 id="&#20195;&#30721;">&#20195;&#30721;</h3>
+<p>&#20351;&#29992;1&#25110;2&#20010;TAB&#21487;&#20197;&#24341;&#29992;&#22823;&#27573;&#30340;&#20195;&#30721;&#20445;&#25345;&#21407;&#26377;&#32553;&#36827;&#26684;&#24335;</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf(&quot;hello, world\n&quot;);
+    return 0;
+}</code></pre>
+<h2 id="&#26684;&#24335;&#36716;&#25442;&#24037;&#20855;&#20351;&#29992;">&#26684;&#24335;&#36716;&#25442;&#24037;&#20855;&#20351;&#29992;</h2>
+<h3 id="&#24037;&#20855;&#23433;&#35013;">&#24037;&#20855;&#23433;&#35013;</h3>
+<ul>
+<li>sudo apt-get install pandoc</li>
+<li>sudo apt-get install texlive</li>
+<li>sudo apt-get install xelatex</li>
+<li>sudo apt-get install unoconv</li>
+</ul>
+<h2 id="&#20960;&#20010;&#23454;&#29992;&#36716;&#25442;&#33539;&#20363;">&#20960;&#20010;&#23454;&#29992;&#36716;&#25442;&#33539;&#20363;</h2>
+<h3 id="md---html">md -&gt; html</h3>
+<pre><code>pandoc --ascii -f markdown -t html -o demo.html demo.md</code></pre>
+<ul>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.html">html&#19979;&#36733;</a></li>
+</ul>
+<h3 id="md---doc">md -&gt; doc</h3>
+<pre><code>pandoc demo.md -o demo.doc</code></pre>
+<ul>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc">doc&#19979;&#36733;</a></li>
+</ul>
+<h3 id="md---doc---pdf">md -&gt; doc -&gt; pdf</h3>
+<pre><code>unoconv -f pdf demo.doc </code></pre>
+<ul>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf">pdf&#19979;&#36733;</a></li>
+</ul>
+<h3 id="md---tex---doc.pdf">md -&gt; tex -&gt; doc.pdf</h3>
+<pre><code>pandoc $(SRC) -o $(PREFIX)2doc.tex
+xelatex demo.doc.tex</code></pre>
+<ul>
+<li>demo.doc.tex &#26159;&#33258;&#21046;doc tex&#27169;&#26495;&#25991;&#20214;</li>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf">doc.pdf&#19979;&#36733;</a></li>
+</ul>
+<h3 id="md---tex---ppt.pdf">md -&gt; tex -&gt; ppt.pdf</h3>
+<pre><code>pandoc -t beamer --slide-level 2 demo.md -o demo.tex
+xelatex demo.ppt.tex</code></pre>
+<ul>
+<li>demo.ppt.tex &#26159;&#33258;&#21046;ppt tex&#27169;&#26495;&#25991;&#20214;</li>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf">ppt.pdf&#19979;&#36733;</a></li>
+</ul>
+<h2 id="&#21442;&#32771;&#36164;&#26009;">&#21442;&#32771;&#36164;&#26009;</h2>
+<ul>
+<li>Pandoc&#35821;&#27861;&#35814;&#35299; <a href="http://johnmacfarlane.net/pandoc/demos.html"><code class="url">http://johnmacfarlane.net/pandoc/demos.html</code></a></li>
+<li>pandoc&#26159;&#20160;&#20040; <a href="http://yanping.me/cn/blog/2012/03/13/pandoc/"><code class="url">http://yanping.me/cn/blog/2012/03/13/pandoc/</code></a></li>
+<li>Markdown&#20889;&#20316;&#36827;&#38454; <a href="http://www.yangzhiping.com/tech/pandoc.html"><code class="url">http://www.yangzhiping.com/tech/pandoc.html</code></a></li>
+<li>unoconv&#29992;&#27861;&#21442;&#25968; <a href="http://t.cn/zYBW9w2"><code class="url">http://t.cn/zYBW9w2</code></a></li>
+<li>latex&#23398;&#20064;&#35270;&#39057;&#35838;&#31243; <a href="http://www.happycasts.net/episodes/19?autoplay=true"><code class="url">http://www.happycasts.net/episodes/19?autoplay=true</code></a></li>
+<li>beamer theme&#24555;&#36895;&#26597;&#30475; <a href="http://www.hartwork.org/beamer-theme-matrix/"><code class="url">http://www.hartwork.org/beamer-theme-matrix/</code></a></li>
+</ul>
+<h2 id="thanks">Thanks</h2>
+<div class="figure">
+<img src="./figures/1.2.jpg" alt="Questions" /><p class="caption">Questions</p>
+</div>

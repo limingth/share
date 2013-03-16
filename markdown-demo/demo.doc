@@ -1,0 +1,104 @@
+<h1 id="markdown使用经验介绍">Markdown使用经验介绍</h1>
+<h2 id="本次讲座大纲">本次讲座大纲</h2>
+<ul>
+<li>Markdown格式简介
+<ul>
+<li>标题</li>
+<li>列表</li>
+<li>内容</li>
+</ul></li>
+<li>格式转换工具使用
+<ul>
+<li>pandoc</li>
+<li>xelatex</li>
+<li>unoconv</li>
+</ul></li>
+<li>几个实用转换范例
+<ul>
+<li>md -&gt; html, doc, pdf, ppt</li>
+</ul></li>
+</ul>
+<div class="figure">
+<img src="./figures/1.1.png" alt="markdown logo" /><p class="caption">markdown logo</p>
+</div>
+<h2 id="markdown-目录结构">Markdown 目录结构</h2>
+<h3 id="标题">标题</h3>
+<ul>
+<li><p>一级/二级/三级/四级<br /> # 一级标题<br /> ## 二级标题<br /> ### 三级标题<br /> #### 四级标题</p></li>
+<li><p>还有一种写法<br /> 一级标题<br /> =========<br /> 二级标题<br /> ---------</p></li>
+</ul>
+<h3 id="列表">列表</h3>
+<ul>
+<li>星号(实心圆点)
+<ul>
+<li>减号(空心圆点)</li>
+</ul></li>
+</ul>
+<h2 id="markdown-正文内容">Markdown 正文内容</h2>
+<h3 id="内容">内容</h3>
+<ul>
+<li>黑体/斜体<br /> 这是一段 <strong>黑体</strong> 文字<br /> 这是一段 <em>斜体</em> 文字</li>
+<li>超链接<br /> 欢迎访问我的微博 <a href="http://weibo.com/limingth"><code class="url">http://weibo.com/limingth</code></a><br /> 请关注 <a href="http://weibo.com/limingth">@亚嵌李明老师</a></li>
+<li>换行<br /> 可以在行尾输入2个空格<br /> 就可以实现换行功能</li>
+</ul>
+<h2 id="markdown-代码引用">Markdown 代码引用</h2>
+<h3 id="代码">代码</h3>
+<p>使用1或2个TAB可以引用大段的代码保持原有缩进格式</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf(&quot;hello, world\n&quot;);
+    return 0;
+}</code></pre>
+<h2 id="格式转换工具使用">格式转换工具使用</h2>
+<h3 id="工具安装">工具安装</h3>
+<ul>
+<li>sudo apt-get install pandoc</li>
+<li>sudo apt-get install texlive</li>
+<li>sudo apt-get install xelatex</li>
+<li>sudo apt-get install unoconv</li>
+</ul>
+<h2 id="几个实用转换范例">几个实用转换范例</h2>
+<h3 id="md---html">md -&gt; html</h3>
+<pre><code>pandoc --ascii -f markdown -t html -o demo.html demo.md</code></pre>
+<ul>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.html">html下载</a></li>
+</ul>
+<h3 id="md---doc">md -&gt; doc</h3>
+<pre><code>pandoc demo.md -o demo.doc</code></pre>
+<ul>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc">doc下载</a></li>
+</ul>
+<h3 id="md---doc---pdf">md -&gt; doc -&gt; pdf</h3>
+<pre><code>unoconv -f pdf demo.doc </code></pre>
+<ul>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf">pdf下载</a></li>
+</ul>
+<h3 id="md---tex---doc.pdf">md -&gt; tex -&gt; doc.pdf</h3>
+<pre><code>pandoc $(SRC) -o $(PREFIX)2doc.tex
+xelatex demo.doc.tex</code></pre>
+<ul>
+<li>demo.doc.tex 是自制doc tex模板文件</li>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf">doc.pdf下载</a></li>
+</ul>
+<h3 id="md---tex---ppt.pdf">md -&gt; tex -&gt; ppt.pdf</h3>
+<pre><code>pandoc -t beamer --slide-level 2 demo.md -o demo.tex
+xelatex demo.ppt.tex</code></pre>
+<ul>
+<li>demo.ppt.tex 是自制ppt tex模板文件</li>
+<li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf">ppt.pdf下载</a></li>
+</ul>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li>Pandoc语法详解 <a href="http://johnmacfarlane.net/pandoc/demos.html"><code class="url">http://johnmacfarlane.net/pandoc/demos.html</code></a></li>
+<li>pandoc是什么 <a href="http://yanping.me/cn/blog/2012/03/13/pandoc/"><code class="url">http://yanping.me/cn/blog/2012/03/13/pandoc/</code></a></li>
+<li>Markdown写作进阶 <a href="http://www.yangzhiping.com/tech/pandoc.html"><code class="url">http://www.yangzhiping.com/tech/pandoc.html</code></a></li>
+<li>unoconv用法参数 <a href="http://t.cn/zYBW9w2"><code class="url">http://t.cn/zYBW9w2</code></a></li>
+<li>latex学习视频课程 <a href="http://www.happycasts.net/episodes/19?autoplay=true"><code class="url">http://www.happycasts.net/episodes/19?autoplay=true</code></a></li>
+<li>beamer theme快速查看 <a href="http://www.hartwork.org/beamer-theme-matrix/"><code class="url">http://www.hartwork.org/beamer-theme-matrix/</code></a></li>
+</ul>
+<h2 id="thanks">Thanks</h2>
+<div class="figure">
+<img src="./figures/1.2.jpg" alt="Questions" /><p class="caption">Questions</p>
+</div>
