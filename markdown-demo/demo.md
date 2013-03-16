@@ -71,20 +71,20 @@
 
 * md -> doc  
 	pandoc demo.md -o demo.doc
-	- [doc下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc)
+	- [doc下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc)  
 * md -> doc -> pdf  
 	unoconv -f pdf demo.doc 
-	- [pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf)
+	- [pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf)  
 * md -> tex -> doc.pdf  
 	pandoc $(SRC) -o $(PREFIX)2doc.tex
 	xelatex demo.do
 	- demo.doc.tex 是自制doc tex模板文件
-	- [doc.pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)	
+	- [doc.pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)  
 * md -> tex -> ppt.pdf  
 	pandoc -t beamer --slide-level 2 demo.md -o demo.tex
 	xelatex demo.ppt.tex
 	- demo.ppt.tex 是自制ppt tex模板文件
-	- [ppt.pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf)
+	- [ppt.pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf)  
 
 ## 参考资料
 * Pandoc语法详解 <http://johnmacfarlane.net/pandoc/demos.html>
