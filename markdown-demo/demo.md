@@ -13,7 +13,7 @@
 	- md -> html, doc, pdf, ppt
 ![markdown logo](./figures/1.1.png)
 
-## Markdown 格式简介
+## Markdown 目录结构
 ### 标题
 * 一级/二级/三级/四级  
 	# 一级标题  
@@ -28,10 +28,10 @@
 	---------  
 
 ### 列表
-* 星号
-	- 减号
+* 星号(实心圆点)
+	- 减号(空心圆点)
 
-## 
+## Markdown 正文内容
 ### 内容
 * 黑体/斜体  
 	这是一段 **黑体** 文字  
@@ -43,17 +43,17 @@
 	可以在行尾输入2个空格  
 	就可以实现换行功能
 
-##
+## Markdown 代码引用
 ### 代码
-	使用1或2个TAB可以引用大段的代码保持原有缩进格式 
+使用1或2个TAB可以引用大段的代码保持原有缩进格式 
 
-		#include <stdio.h>
+	#include <stdio.h>
 
-		int main(void)
-		{
-			printf("hello, world\n");
-			return 0;
-		}
+	int main(void)
+	{
+		printf("hello, world\n");
+		return 0;
+	}
 
 
 ## 格式转换工具使用
