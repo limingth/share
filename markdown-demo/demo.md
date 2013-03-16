@@ -69,27 +69,27 @@
 
 		pandoc --ascii -f markdown -t html -o demo.html demo.md  
 
-* md -> doc  [下载demo.doc](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc)
+* md -> doc  [(demo.doc)](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc)
 
 		pandoc demo.md -o demo.doc
 
-* md -> doc -> pdf  [下载demo.pdf](https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf)  
+* md -> doc -> pdf  [(demo.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf)  
 
 		unoconv -f pdf demo.doc 
 	
-* md -> tex -> doc.pdf  [下载demo.doc.pdf](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)  
+* md -> tex -> doc.pdf  [(demo.doc.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)  
 
 		pandoc $(SRC) -o $(PREFIX)2doc.tex
 		xelatex demo.do
 
-	- demo.doc.tex 是自制doc tex模板文件
+demo.doc.tex 是自制doc tex模板文件
 	
-* md -> tex -> ppt.pdf  [下载demo.ppt.pdf](https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf)  
+* md -> tex -> ppt.pdf  [(demo.ppt.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf)  
 
 		pandoc -t beamer --slide-level 2 demo.md -o demo.tex
 		xelatex demo.ppt.tex
 		
-	- demo.ppt.tex 是自制ppt tex模板文件
+demo.ppt.tex 是自制ppt tex模板文件
 	
 ## 参考资料
 * Pandoc语法详解 <http://johnmacfarlane.net/pandoc/demos.html>
