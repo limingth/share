@@ -65,30 +65,32 @@
 * sudo apt-get install unoconv
 
 ## 几个实用转换范例
-* md -> html [下载demo.html](https://github.com/limingth/share/tree/master/markdown-demo/demo.html)  
+* md -> html [下载demo.html](https://github.com/limingth/share/tree/master/markdown-demo/demo.html)
+
 		pandoc --ascii -f markdown -t html -o demo.html demo.md  
 
 * md -> doc  [下载demo.doc](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc)
 
 		pandoc demo.md -o demo.doc
 
-* md -> doc -> pdf  
-	unoconv -f pdf demo.doc 
-	- [pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf)  
+* md -> doc -> pdf  [下载demo.pdf](https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf)  
+
+		unoconv -f pdf demo.doc 
 	
-* md -> tex -> doc.pdf  
+* md -> tex -> doc.pdf  [下载demo.doc.pdf](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)  
 
 		pandoc $(SRC) -o $(PREFIX)2doc.tex
 		xelatex demo.do
 
 	- demo.doc.tex 是自制doc tex模板文件
-	- [doc.pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)  
-* md -> tex -> ppt.pdf  
-	pandoc -t beamer --slide-level 2 demo.md -o demo.tex
-	xelatex demo.ppt.tex
-	- demo.ppt.tex 是自制ppt tex模板文件
-	- [ppt.pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf)  
+	
+* md -> tex -> ppt.pdf  [下载demo.ppt.pdf](https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf)  
 
+		pandoc -t beamer --slide-level 2 demo.md -o demo.tex
+		xelatex demo.ppt.tex
+		
+	- demo.ppt.tex 是自制ppt tex模板文件
+	
 ## 参考资料
 * Pandoc语法详解 <http://johnmacfarlane.net/pandoc/demos.html>
 * pandoc是什么 <http://yanping.me/cn/blog/2012/03/13/pandoc/>
