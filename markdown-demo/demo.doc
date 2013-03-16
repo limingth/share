@@ -70,7 +70,7 @@ int main(void)
 <pre><code>unoconv -f pdf demo.doc 
     (目录无数字标题1.1.1)</code></pre></li>
 <li><p>md-&gt;tex-&gt;doc.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf">(demo.doc.pdf)</a></p>
-<pre><code>pandoc $(SRC) -o $(PREFIX)2doc.tex
+<pre><code>pandoc demo.md -o demo2doc.tex
 xelatex demo.doc.tex
     (demo.doc.tex 是自制doc tex模板文件, 自动生成数字标题1.1.1)</code></pre></li>
 <li><p>md-&gt;tex-&gt;ppt.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf">(demo.ppt.pdf)</a></p>
