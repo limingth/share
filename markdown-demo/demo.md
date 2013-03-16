@@ -81,7 +81,7 @@
 	
 * md->tex->doc.pdf  [(demo.doc.pdf)](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)
 
-		pandoc $(SRC) -o $(PREFIX)2doc.tex
+		pandoc demo.md -o demo2doc.tex
 		xelatex demo.doc.tex
 			(demo.doc.tex 是自制doc tex模板文件, 自动生成数字标题1.1.1)
 	
