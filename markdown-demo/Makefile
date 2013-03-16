@@ -19,16 +19,18 @@ doc:
 pdf:
 	pandoc $(SRC) -o $(PREFIX)2doc.tex
 	xelatex demo.doc.tex
-	evince demo.doc.pdf
+#	evince demo.doc.pdf
 
 ppt:
 	pandoc -t beamer --slide-level 2 $(SRC) -o $(PREFIX)2ppt.tex
 	xelatex demo.ppt.tex
-	evince demo.ppt.pdf
+#	evince demo.ppt.pdf
 
 clean:
 	-rm *.html *.doc *.pdf 
 	-rm *.aux *.nav *.snm *.vrb *.log *.out *.toc
+	-rm $(PREFIX).tex
+	-rm $(PREFIX)2*.*
 
 open:
 	gnome-open $(PREFIX).html &

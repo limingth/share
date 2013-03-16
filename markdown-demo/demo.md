@@ -88,8 +88,8 @@
 * Pandoc语法详解 <http://johnmacfarlane.net/pandoc/demos.html>
 * pandoc是什么 <http://yanping.me/cn/blog/2012/03/13/pandoc/>
 * Markdown写作进阶 <http://www.yangzhiping.com/tech/pandoc.html>
-* unoconv用法参数 <http://linux-wiki.cn/wiki/zh-hans/文档格式批量转换(doc,txt,pdf等)>
-* happycasts.net latex学习视频课程 <http://www.happycasts.net/episodes/19?autoplay=true>
+* unoconv用法参数 <http://t.cn/zYBW9w2>
+* latex学习视频课程 <http://www.happycasts.net/episodes/19?autoplay=true>
 * beamer theme快速查看 <http://www.hartwork.org/beamer-theme-matrix/>
 
 ## Thanks
