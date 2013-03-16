@@ -8,6 +8,7 @@ all:
 	make ppt
 	-rm *.aux *.nav *.snm *.vrb *.log *.out *.toc
 	-rm demo2*
+	make commit
 
 html:
 	pandoc $(SRC) --ascii -f markdown -t html -o $(PREFIX).html 
@@ -40,3 +41,7 @@ open:
 	gnome-open $(PREFIX).pdf &
 	gnome-open $(PREFIX).doc.pdf
 	gnome-open $(PREFIX).ppt.pdf
+
+commit:
+	git commit -a -m "M demo.md"
+	git push

@@ -69,15 +69,13 @@ int main(void)
 <pre><code>unoconv -f pdf demo.doc </code></pre></li>
 <li><p>md -&gt; tex -&gt; doc.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf">(demo.doc.pdf)</a></p>
 <pre><code>pandoc $(SRC) -o $(PREFIX)2doc.tex
-xelatex demo.do</code></pre></li>
-</ul>
-<p>demo.doc.tex 是自制doc tex模板文件</p>
-<ul>
+xelatex demo.doc.tex
+    (demo.doc.tex 是自制doc tex模板文件)</code></pre></li>
 <li><p>md -&gt; tex -&gt; ppt.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf">(demo.ppt.pdf)</a></p>
 <pre><code>pandoc -t beamer --slide-level 2 demo.md -o demo.tex
-xelatex demo.ppt.tex</code></pre></li>
+xelatex demo.ppt.tex
+    (demo.ppt.tex 是自制ppt tex模板文件)</code></pre></li>
 </ul>
-<p>demo.ppt.tex 是自制ppt tex模板文件</p>
 <h2 id="参考资料">参考资料</h2>
 <ul>
 <li>Pandoc语法详解 <a href="http://johnmacfarlane.net/pandoc/demos.html"><code class="url">http://johnmacfarlane.net/pandoc/demos.html</code></a></li>

@@ -69,15 +69,13 @@ int main(void)
 <pre><code>unoconv -f pdf demo.doc </code></pre></li>
 <li><p>md -&gt; tex -&gt; doc.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf">(demo.doc.pdf)</a></p>
 <pre><code>pandoc $(SRC) -o $(PREFIX)2doc.tex
-xelatex demo.do</code></pre></li>
-</ul>
-<p>demo.doc.tex &#26159;&#33258;&#21046;doc tex&#27169;&#26495;&#25991;&#20214;</p>
-<ul>
+xelatex demo.doc.tex
+    (demo.doc.tex &#26159;&#33258;&#21046;doc tex&#27169;&#26495;&#25991;&#20214;)</code></pre></li>
 <li><p>md -&gt; tex -&gt; ppt.pdf <a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf">(demo.ppt.pdf)</a></p>
 <pre><code>pandoc -t beamer --slide-level 2 demo.md -o demo.tex
-xelatex demo.ppt.tex</code></pre></li>
+xelatex demo.ppt.tex
+    (demo.ppt.tex &#26159;&#33258;&#21046;ppt tex&#27169;&#26495;&#25991;&#20214;)</code></pre></li>
 </ul>
-<p>demo.ppt.tex &#26159;&#33258;&#21046;ppt tex&#27169;&#26495;&#25991;&#20214;</p>
 <h2 id="&#21442;&#32771;&#36164;&#26009;">&#21442;&#32771;&#36164;&#26009;</h2>
 <ul>
 <li>Pandoc&#35821;&#27861;&#35814;&#35299; <a href="http://johnmacfarlane.net/pandoc/demos.html"><code class="url">http://johnmacfarlane.net/pandoc/demos.html</code></a></li>
