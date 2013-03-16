@@ -79,8 +79,8 @@
 	
 * md -> tex -> doc.pdf  
 
-	pandoc $(SRC) -o $(PREFIX)2doc.tex
-	xelatex demo.do
+		pandoc $(SRC) -o $(PREFIX)2doc.tex
+		xelatex demo.do
 
 	- demo.doc.tex 是自制doc tex模板文件
 	- [doc.pdf下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf)  
