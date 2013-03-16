@@ -65,21 +65,21 @@
 * sudo apt-get install unoconv
 
 ## 几个实用转换范例
-### md->html
+### md -> html
 * pandoc --ascii -f markdown -t html -o demo.html demo.md
 
-### md->doc
+### md -> doc
 * pandoc demo.md -o demo.doc
 
-### md->doc->pdf
+### md -> doc -> pdf
 * unoconv -f pdf demo.doc 
 
-### md->doc.pdf
+### md -> doc.pdf
 * pandoc $(SRC) -o $(PREFIX)2doc.tex
 * xelatex demo.doc.tex
 	- demo.doc.tex 是自制doc tex模板文件
 
-### md->ppt.pdf
+### md -> ppt.pdf
 * pandoc -t beamer --slide-level 2 demo.md -o demo.tex
 * xelatex demo.ppt.tex
 	- demo.ppt.tex 是自制ppt tex模板文件
