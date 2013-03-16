@@ -66,23 +66,23 @@
 
 ## 几个实用转换范例
 ### md -> html
-* pandoc --ascii -f markdown -t html -o demo.html demo.md
+	pandoc --ascii -f markdown -t html -o demo.html demo.md
 
 ### md -> doc
-* pandoc demo.md -o demo.doc
+	pandoc demo.md -o demo.doc
 
 ### md -> doc -> pdf
-* unoconv -f pdf demo.doc 
+	unoconv -f pdf demo.doc 
 
-### md -> doc.pdf
-* pandoc $(SRC) -o $(PREFIX)2doc.tex
-* xelatex demo.doc.tex
-	- demo.doc.tex 是自制doc tex模板文件
-
-### md -> ppt.pdf
-* pandoc -t beamer --slide-level 2 demo.md -o demo.tex
-* xelatex demo.ppt.tex
-	- demo.ppt.tex 是自制ppt tex模板文件
+### md -> tex -> doc.pdf
+	pandoc $(SRC) -o $(PREFIX)2doc.tex
+	xelatex demo.doc.tex
+		- demo.doc.tex 是自制doc tex模板文件
+	
+### md -> tex -> ppt.pdf
+	pandoc -t beamer --slide-level 2 demo.md -o demo.tex
+	xelatex demo.ppt.tex
+		- demo.ppt.tex 是自制ppt tex模板文件
 
 ## 参考资料
 * Pandoc语法详解 <http://johnmacfarlane.net/pandoc/demos.html>
