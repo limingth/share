@@ -66,8 +66,9 @@
 
 ## 几个实用转换范例
 * md -> html  
+
 		pandoc --ascii -f markdown -t html -o demo.html demo.md  
-		- [html下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.html)
+	- [html下载](https://github.com/limingth/share/tree/master/markdown-demo/demo.html)
 
 * md -> doc  
 	pandoc demo.md -o demo.doc
