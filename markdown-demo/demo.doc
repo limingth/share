@@ -60,34 +60,29 @@ int main(void)
 <li>sudo apt-get install unoconv</li>
 </ul>
 <h2 id="几个实用转换范例">几个实用转换范例</h2>
-<h3 id="md---html">md -&gt; html</h3>
-<pre><code>pandoc --ascii -f markdown -t html -o demo.html demo.md</code></pre>
+<ul>
+<li>md -&gt; html<br /> pandoc --ascii -f markdown -t html -o demo.html demo.md
 <ul>
 <li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.html">html下载</a></li>
-</ul>
-<h3 id="md---doc">md -&gt; doc</h3>
-<pre><code>pandoc demo.md -o demo.doc</code></pre>
+</ul></li>
+<li>md -&gt; doc<br /> pandoc demo.md -o demo.doc
 <ul>
 <li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc">doc下载</a></li>
-</ul>
-<h3 id="md---doc---pdf">md -&gt; doc -&gt; pdf</h3>
-<pre><code>unoconv -f pdf demo.doc </code></pre>
+</ul></li>
+<li>md -&gt; doc -&gt; pdf<br /> unoconv -f pdf demo.doc
 <ul>
 <li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.pdf">pdf下载</a></li>
-</ul>
-<h3 id="md---tex---doc.pdf">md -&gt; tex -&gt; doc.pdf</h3>
-<pre><code>pandoc $(SRC) -o $(PREFIX)2doc.tex
-xelatex demo.doc.tex</code></pre>
+</ul></li>
+<li>md -&gt; tex -&gt; doc.pdf<br /> pandoc $(SRC) -o $(PREFIX)2doc.tex xelatex demo.do
 <ul>
 <li>demo.doc.tex 是自制doc tex模板文件</li>
 <li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.doc.pdf">doc.pdf下载</a></li>
-</ul>
-<h3 id="md---tex---ppt.pdf">md -&gt; tex -&gt; ppt.pdf</h3>
-<pre><code>pandoc -t beamer --slide-level 2 demo.md -o demo.tex
-xelatex demo.ppt.tex</code></pre>
+</ul></li>
+<li>md -&gt; tex -&gt; ppt.pdf<br /> pandoc -t beamer --slide-level 2 demo.md -o demo.tex xelatex demo.ppt.tex
 <ul>
 <li>demo.ppt.tex 是自制ppt tex模板文件</li>
 <li><a href="https://github.com/limingth/share/tree/master/markdown-demo/demo.ppt.pdf">ppt.pdf下载</a></li>
+</ul></li>
 </ul>
 <h2 id="参考资料">参考资料</h2>
 <ul>

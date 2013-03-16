@@ -19,6 +19,8 @@ doc:
 pdf:
 	pandoc $(SRC) -o $(PREFIX)2doc.tex
 	xelatex demo.doc.tex
+# must run xelatex twice to make tableofcontents
+	xelatex demo.doc.tex
 #	evince demo.doc.pdf
 
 ppt:
