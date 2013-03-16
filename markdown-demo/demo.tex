@@ -1,0 +1,162 @@
+\section{Markdown使用经验介绍}
+
+\begin{frame}\frametitle{讲座大纲}
+
+\begin{itemize}
+\item
+  markdown格式简介
+  \begin{itemize}
+  \item
+    标题
+  \item
+    列表
+  \item
+    内容
+  \end{itemize}
+\item
+  格式转换工具使用
+  \begin{itemize}
+  \item
+    pandoc
+  \item
+    xelatex
+  \item
+    unoconv
+  \end{itemize}
+\item
+  几个实用转换范例
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{markdown格式简介}
+
+\begin{block}{标题}
+
+\begin{itemize}
+\item
+  一级/二级/三级/四级\\ \# 一级标题\\ \#\# 二级标题\\ \#\#\# 三级标题\\
+  \#\#\#\# 四级标题
+\item
+  还有一种写法\\ 一级标题\\ =========\\ 二级标题\\ ---------
+\end{itemize}
+\end{block}
+
+\begin{block}{列表}
+
+\begin{itemize}
+\item
+  星号
+  \begin{itemize}
+  \item
+    减号
+  \end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{markdown格式简介}
+
+\begin{block}{内容}
+
+\begin{itemize}
+\item
+  黑体/斜体\\ 这是一段 \textbf{黑体} 文字\\ 这是一段 \emph{斜体} 文字
+\item
+  超链接\\ 欢迎访问我的微博 \url{http://weibo.com/limingth}\\ 请关注
+  \href{http://weibo.com/limingth}{@亚嵌李明老师}
+\item
+  换行\\ 可以在行尾输入2个空格\\ 就可以实现换行功能
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{markdown格式简介}
+
+\begin{block}{代码}
+
+\begin{verbatim}
+使用1或2个TAB可以引用大段的代码保持原有缩进格式 
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+    return 0;
+}
+\end{verbatim}
+\end{block}
+
+\end{frame}
+
+\begin{frame}\frametitle{格式转换工具使用}
+
+\begin{block}{工具安装}
+
+\begin{itemize}
+\item
+  sudo apt-get install pandoc
+\item
+  sudo apt-get install texlive
+\item
+  sudo apt-get install xelatex
+\item
+  sudo apt-get install unoconv
+\end{itemize}
+\end{block}
+
+\begin{block}{相关参考}
+
+\begin{itemize}
+\item
+  http://johnmacfarlane.net/pandoc/demos.html
+\item
+  http://yanping.me/cn/blog/2012/03/13/pandoc/
+\item
+  http://www.yangzhiping.com/tech/pandoc.html
+\item
+  http://linux-wiki.cn/wiki/zh-hans/文档格式批量转换(doc,txt,pdf等)
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}\frametitle{几个实用转换范例}
+
+\begin{block}{md-\textgreater{}html}
+
+\begin{itemize}
+\item
+  pandoc --ascii -f markdown -t html -o demo.html demo.md
+\end{itemize}
+\end{block}
+
+\begin{block}{md-\textgreater{}doc}
+
+\begin{itemize}
+\item
+  pandoc demo.md -o demo.doc
+\end{itemize}
+\end{block}
+
+\begin{block}{md-\textgreater{}doc-\textgreater{}pdf}
+
+\begin{itemize}
+\item
+  unoconv -f pdf demo.doc
+\end{itemize}
+\end{block}
+
+\begin{block}{md-\textgreater{}ppt-\textgreater{}pdf}
+
+\begin{itemize}
+\item
+  pandoc -t beamer --slide-level 2 demo.md -o demo.tex
+\item
+  xelatex main.tex
+\end{itemize}
+\end{block}
+
+\end{frame}

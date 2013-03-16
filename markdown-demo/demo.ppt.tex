@@ -1,0 +1,42 @@
+\documentclass[10pt]{beamer}  
+\usetheme{Malmoe}        
+\usecolortheme{default}         
+\setbeamertemplate{navigation symbols}{}
+\title{Markdown使用经验介绍}
+\subtitle{清华技术交流会}
+\author{@亚嵌李明老师}
+\date{2013-3-17}
+\institute{http://weibo.com/limingth}
+\usepackage{fontspec}
+\usefonttheme{serif}
+\setmainfont[Mapping=tex-text]{WenQuanYi Zen Hei Mono}
+\setromanfont[Mapping=tex-text,BoldFont=WenQuanYi Micro Hei]{AR PL SungtiL GB}
+\setmonofont[Mapping=tex-text]{WenQuanYi Zen Hei Mono}
+
+% enables straight single quote
+\makeatletter
+\let \@sverbatim \@verbatim
+\def \@verbatim {\@sverbatim \verbatimplus}
+{\catcode`'=13 \gdef \verbatimplus{\catcode`'=13 \chardef '=13 }} 
+\makeatother
+
+% enables backticks in verbatim
+\makeatletter
+{\catcode`\`=13
+\xdef\@verbatim{\unexpanded\expandafter{\@verbatim}\chardef\noexpand`=18 }
+}
+\makeatother
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\begin{itemize}
+\item 	下载链接 \url{https://github.com/limingth/share/}
+\end{itemize}
+\end{frame}
+
+\input{"demo2ppt.tex"}
+
+\end{document}
