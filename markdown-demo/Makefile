@@ -19,6 +19,9 @@ doc:
 
 pdf:
 	pandoc $(SRC) -o $(PREFIX)2doc.tex
+	doconce subst '\\begin{verbatim}' '{\\begin{shaded}\\begin{verbatim}' $(PREFIX)2doc.tex
+	doconce subst '\\end{verbatim}' '\\end{verbatim}\\end{shaded}}' $(PREFIX)2doc.tex
+	doconce subst '\\begin{document}' '\\usepackage{framed,color}\n\\definecolor{shadecolor}{gray}{0.90}\n\\begin{document}' demo.doc.tex
 	xelatex demo.doc.tex
 # must run xelatex twice to make tableofcontents
 	xelatex demo.doc.tex
